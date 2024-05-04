@@ -3,8 +3,8 @@
 
 html {
     /* font */
-    --font-sans: 'Manrope', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Share Tech', sans-serif;
+    --font-mono: 'Share Tech Mono', monospace;
 
     /* dark */
     --brand-dark: #00FF00;
@@ -16,6 +16,9 @@ html {
     --surface-4-dark: #1f1e1e;
     --background-dark: #1b1b1b;
     --border-dark: #00FF00;
+	--button-text-color: green;
+    --button-hover-bg-color: green;
+    --button-hover-text-color: black;
 
     /* light */
     --brand-light: #FFA500;
@@ -41,6 +44,9 @@ html {
 	--surface-4: var(--surface-4-dark);
 	--background: var(--background-dark);
 	--border: var(--border-dark);
+	--button-text-color: green;
+    --button-hover-bg-color: green;
+    --button-hover-text-color: black;
 }
 
 @media (prefers-color-scheme: light) {
@@ -85,6 +91,9 @@ html {
 	--surface-4: var(--surface-4-light);
 	--background: var(--background-light);
 	--border: var(--border-light);
+	--button-text-color: rgb(0, 0, 0);
+    --button-hover-bg-color: rgb(0, 0, 0);
+    --button-hover-text-color: white;
 }
 
 html,
