@@ -1,35 +1,40 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition'
-	import { Moon, Sun } from 'lucide-svelte'
-	import { theme, toggleTheme } from '$lib/theme'
+    import { fly } from 'svelte/transition'
+    import { Moon, Sun } from 'lucide-svelte'
+    import { theme, toggleTheme } from '$lib/theme'
 </script>
 
-<button on:click={toggleTheme} aria-label="Toggle theme">
-	{#if $theme === 'dark'}
-		<div in:fly={{ y: 10 }}>
-			<Sun />
-			<span>Light</span>
-		</div>
-	{:else}
-		<div in:fly={{ y: -10 }}>
-			<Moon />
-			<span>Dark</span>
-		</div>
-	{/if}
-</button>
+<div on:click={toggleTheme} aria-label="Toggle theme" role="button" style="cursor: pointer;">
+    {#if $theme === 'dark'}
+        <div in:fly={{ y: 10 }}>
+            <Sun />
+            <span>[   light   ]</span>
+        </div>
+    {:else}
+        <div in:fly={{ y: -10 }}>
+            <Moon />
+            <span>[   dark   ]</span>
+        </div>
+    {/if}
+</div>
 
 <style>
-	button {
-		padding: 0;
-		font-weight: inherit;
-		background: none;
-		border: none;
-		box-shadow: none;
-		overflow: hidden;
-	}
+    div {
+        border: 2px solid transparent;
+        padding: 5px 10px;
+        background-color: transparent;
+        color: var(--button-text-color, green);
+        font-weight: bold;
+        display: inline-flex;
+    }
 
-	button > * {
-		display: flex;
-		gap: var(--size-2);
-	}
+    div:hover {
+        background-color: var(--button-hover-bg-color, green);
+        color: var(--button-hover-text-color, black);
+    }
+
+    div > * {
+        display: flex;
+        gap: var(--size-2);
+    }
 </style>
