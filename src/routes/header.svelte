@@ -11,15 +11,15 @@
 
     <ul class="links">
         <li>
-            <a href="/about">About</a>
+            <a class="funny-button" href="/about">[   about   ]</a>
         </li>
 
     <li>
-        <a href="/contact">Contact</a>
+        <a class="funny-button" href="/contact">[   contact   ]</a>
     </li>
 
     <li>
-        <a href="/rss.xml" target="_blank">RSS</a>
+        <a class="funny-button" href="/rss.xml" target="_blank">[   rss   ]</a>
     </li>
 </ul>
 
@@ -41,6 +41,19 @@
         color: inherit;
         text-decoration: none;
     }
+    .funny-button {
+        border: 2px solid transparent;
+        padding: 5px 10px;
+        background-color: transparent;
+        color: var(--button-text-color, green);
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .funny-button:hover {
+        background-color: var(--button-hover-bg-color, green);
+        color: var(--button-hover-text-color, black);
+    }
 
     @media (min-width: 768px) {
         nav {
@@ -52,6 +65,22 @@
             display: flex;
             gap: var(--size-7);
             margin-block: 0;
+        }
+    }
+    @media (prefers-color-scheme: light) {
+        :root {
+            --button-text-color: blue;
+            --button-hover-bg-color: blue;
+            --button-hover-text-color: white;
+        }
+    }
+
+    /* Dark theme colors */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --button-text-color: green;
+            --button-hover-bg-color: green;
+            --button-hover-text-color: black;
         }
     }
 </style>
