@@ -2,30 +2,31 @@
 @import '@fontsource/jetbrains-mono';
 
 html {
-	/* font */
-	--font-sans: 'Manrope', sans-serif;
-	--font-mono: 'JetBrains Mono', monospace;
+    /* font */
+    --font-sans: 'Manrope', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
 
-	/* dark */
-	--brand-dark: #00FF00;
-	--text-1-dark: #00FF00;
-	--text-2-dark: #00FF00;
-	--surface-1-dark: #000;
-	--surface-2-dark: #000;
-	--surface-3-dark: #084b0c;
-	--surface-4-dark: #1f1e1e;
-	--background-dark: #1b1b1b;
-	--border-dark: #00FF00;
-	/* light */
-	--brand-light: var(--orange-10);
-	--text-1-light: var(--gray-8);
-	--text-2-light: var(--gray-7);
-	--surface-1-light: var(--gray-0);
-	--surface-2-light: var(--gray-1);
-	--surface-3-light: var(--gray-2);
-	--surface-4-light: var(--gray-3);
-	--background-light: none;
-	--border-light: var(--gray-4);
+    /* dark */
+    --brand-dark: #00FF00;
+    --text-1-dark: #00FF00;
+    --text-2-dark: #00FF00;
+    --surface-1-dark: #000;
+    --surface-2-dark: #000;
+    --surface-3-dark: #084b0c;
+    --surface-4-dark: #1f1e1e;
+    --background-dark: #1b1b1b;
+    --border-dark: #00FF00;
+
+    /* light */
+    --brand-light: #FFA500;
+    --text-1-light: #1b1b1b;
+    --text-2-light: #555;
+    --surface-1-light: #FFF;
+    --surface-2-light: #F5F5F5;
+    --surface-3-light: #E0E0E0;
+    --surface-4-light: #D3D3D3;
+    --background-light: #FFF;
+    --border-light: #CCC;
 }
 
 :root {
